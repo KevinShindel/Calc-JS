@@ -1,33 +1,96 @@
-﻿<!DOCTYPE HTML>
+﻿
+<!DOCTYPE HTML>
 <html lang="ru">
+
 <head>
-<meta charset="utf-8">
-	<title>Титул документа</title>
+	<meta charset="utf-8">
+	<title>WPA/WPA2 calc</title>
+	<link rel="stylesheet" href="style.css">
+</head>
 
-
-
-</head >
 <body>
-	<p><h1>Текст текущего документа</h1></p>
 
-	<form action="#" onsubmit="return false;">
-		<input type="text" name="text1" value="" id="leftOperand" >
-		<select class="" name="" id="operation">
-			<option value="+">+</option>
-			<option value="-">-</option>
-			<option value="/">/</option>
-			<option value="*">*</option>
-			<option value="^">^</option>
-			</select>
-		<input type="text" name="text2" value="" id="rightOperand">
-		<span> = </span>
-		<input type="text" name="result" value="" disabled id="result">
-<div>
-		<input type="submit" name="submit" value="submit" id="submit" onclick="calc()">
-		<input type="reset" name="reset" value="reset" id="reset">
-</div>
-	</form>
+	<section>
+		<p>
+			<h2 style="text-align:center;">WPA/WPA2 Bruteforce Calc v1.2</h2>
+		</p>
 
-<script src="my.js" charset="utf-8"></script>
+		<form action="#" onsubmit="return false;">
+			<div>
+
+				<div>
+					<fieldset>
+						<legend>	Расчётное время :</legend>
+						<div class="input_box"><input style="font:Bold 16px Arial;text-align:center;" type="text" name="" value="" disabled id="result"></div>
+						</fieldset>
+				</div>
+
+				<div>
+
+				<fieldset>
+					<legend>Длинна пароля (от 8 до 64): </legend>
+				<div class="input_box"><input type="number" name="pass" id="pass" value="8" maxlength="1" /></div>
+				</fieldset>
+			</div>
+
+			<div >
+				<fieldset>
+					<legend>Выбор символов</legend>
+					<div style="text-align:center;">
+					<span class="text_box_font">A...Z</span><input type="checkbox" name="symbols" id="Up">
+					<span class="text_box_font">a...z</span><input type="checkbox" name="symbols" id="Lw">
+					<span class="text_box_font">+-!/</span><input type="checkbox" name="symbols" id="Sp">
+					<span class="text_box_font">0...9</span><input type="checkbox" name="symbols" id="Dg" checked>
+					</div>
+				</fieldset>
+			</div>
+
+			<div>
+				<fieldset>
+					<legend>Выбор карточки</legend>
+					<div class="input_box">
+						<select class="" name="" id="video">
+							<optgroup label="nVidia">
+							<option value="GTX1080">GTX1080ti</option>
+							<option value="GTX1080">GTX1080</option>
+							<option value="GTX980">GTX980</option>
+							<option value="GTX760">GTX760</option>
+							<option value="GTX680">GTX680</option>
+						</optgroup>
+						<optgroup label="AMD">
+							<option value="RX580">RX580</option>
+							<option value="RX570">RX570</option>
+							<option value="RX560">RX560</option>
+							<option value="RX480">RX480</option>
+							<option value="RX470">RX470</option>
+							<option value="RX460">RX460</option>
+							</optgroup>
+						</select>
+					</div>
+				</fieldset>
+			</div>
+			<div>
+				<fieldset>
+					<legend>Количество карточек :</legend>
+					<div class="input_box"><input type="number" name="" id="acc_pcs" value="1" /></div>
+			</div>
+			</fieldset>
+			<div>
+				<div class="button_box" style="background-color:#43b4d5;">
+				<label for="submit" style="font:bold 18px Arial;color:white;text-shadow: 0 0 2px #000;">CALC!</label>
+				<input type="submit" name="submit" value="submit" id="submit" onclick="calc()" style="display:none;">
+				</div>
+				<div class="button_box" style="background-color:#fd4949;">
+					<label for="reset"  style="font:bold 18px Arial;color:white;text-shadow: 0 0 2px #000;">RESET</label>
+				<input type="reset" name="reset" value="reset" id="reset" style="display:none;width:100%;height:100%;">
+				</div>
+			</div>
+
+
+		</form>
+	</section>
+
+	<script src="my.js" charset="utf-8"></script>
 </body>
+
 </html>
