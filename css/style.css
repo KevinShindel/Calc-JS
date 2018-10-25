@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'droid_sansregular';
-  src: url('fonts/droid_sans-webfont.woff2') format('woff2'),
-    url('fonts/droid_sans-webfont.woff') format('woff');
+  src: url('../fonts/droid_sans-webfont.woff2') format('woff2'),
+    url('../fonts/droid_sans-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
