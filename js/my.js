@@ -101,7 +101,7 @@ function calc() {
     var seconds = Math.floor(result);
 
     // Выводим результат в окно формы.
-    $RES.value = "" + year + " year " + days + " days " + hours + " hours " + minutes + " mimutes " + seconds + " seconds"
+    $RES.value = "" + year + " years " + days + " days " + hours + " hours " + minutes + " min. " + seconds + " sec."
 
     // Выводим результат во всплывающем окне.
     // alert("Время брута составит: " + year + " лет " + days + " дней " + hours + " часов " + minutes + " минут " + seconds + " секунд.");
