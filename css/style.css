@@ -56,24 +56,18 @@ body {
   box-sizing: border-box;
   text-align: center;
   font: Bold 16px Arial, sans-serif;
-  border:0;
-  background-color:#282828;
-  color:#f2f2f2;
+  border: 0;
+  background-color: #282828;
+  color: #f2f2f2;
 }
 
 .button_box {
-  width: calc(50% - 3px);
-  padding: 13px;
+  width: calc(50% - 30px);
+  height: 50px;
+  margin: 13px;
   border: 1px solid #474747;
   box-sizing: border-box;
-  text-align: center;
-  vertical-align: middle;
   display: inline-block;
-  background-color:#282828;
-}
-
-.button_box:hover {
-  background-color: #434343;
 }
 
 section {
@@ -90,11 +84,74 @@ section {
 
 input[type="number"]:focus {
   outline: 0px;
-
 }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-      /* display: none; <- Crashes Chrome on hover */
-      -webkit-appearance: none;
-      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* CSS SWITCH */
+.checkbox {
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+
+.checkbox + .label {
+  position: relative;
+  padding: 0 0 0 0px;
+  cursor: pointer;
+}
+
+.checkbox + .label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 140px;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
+  transition: .2s;
+}
+
+.checkbox + .label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 166px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  transition: .2s;
+}
+
+.checkbox:checked + .label:before {
+  background: #9FD468;
+}
+
+.checkbox:checked + .label:after {
+  left: 143px;
+}
+
+
+.btn-default {
+  border: 0;
+  background-color: #282828;
+  padding: 11px 30px;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  color:white;
+  font: bold 18px Arial;
+}
+
+.btn-default:hover {
+  background-color: #434343;
 }

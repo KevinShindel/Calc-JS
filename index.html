@@ -20,79 +20,97 @@
 
 				<div style="padding-bottom: 10px;">
 					<fieldset>
-						<legend>	Расчётное время :</legend>
+						<legend> Расчётное время :</legend>
 						<div class="input_box"><input type="text" name="" value="" disabled id="result"></div>
-						</fieldset>
+					</fieldset>
 				</div>
 
 				<div style="padding-bottom: 10px;">
-				<fieldset>
-					<legend>Длинна пароля : </legend>
-				<div class="input_box"><input type="number" name="pass" id="pass" value="8" maxlength="1" /></div>
-				</fieldset>
-			</div>
-
-			<div style="padding-bottom: 10px;">
-				<fieldset>
-					<legend>Выбор символов :</legend>
-					<div style="text-align:center;">
-					<span class="text_box_font">A...Z</span><input type="checkbox" name="symbols" id="Up">
-					<span class="text_box_font">a...z</span><input type="checkbox" name="symbols" id="Lw">
-					<span class="text_box_font">+-!/</span><input type="checkbox" name="symbols" id="Sp">
-					<span class="text_box_font">0...9</span><input type="checkbox" name="symbols" id="Dg" checked>
-					</div>
-				</fieldset>
-			</div>
-
-			<div style="padding-bottom: 10px;">
-				<fieldset>
-					<legend>Выбор карточки :</legend>
-					<div class="input_box">
-						<select class="" name="" id="video">
-							<optgroup label="nVidia">
-							<option value="GTX1080">GTX1080ti</option>
-							<option value="GTX1080">GTX1080</option>
-							<option value="GTX980">GTX980</option>
-							<option value="GTX760">GTX760</option>
-							<option value="GTX680">GTX680</option>
-						</optgroup>
-						<optgroup label="AMD">
-							<option value="RX580">RX580</option>
-							<option value="RX570">RX570</option>
-							<option value="RX560">RX560</option>
-							<option value="RX480">RX480</option>
-							<option value="RX470">RX470</option>
-							<option value="RX460">RX460</option>
-							</optgroup>
-						</select>
-					</div>
-				</fieldset>
-			</div>
-
-			<div style="padding-bottom: 10px;">
-				<fieldset>
-					<legend>Количество карточек :</legend>
-					<div class="input_box focus"><input type="number" name="" id="acc_pcs" value="1" style="border:0;background-color:#282828; color:#f2f2f2;"/></div>
-			</div>
-			</fieldset>
-			<div>
-				<div class="button_box">
-				<label for="submit" style="font:bold 18px Arial;color:white;text-shadow: 0 0 2px #000;">CALC!</label>
-				<input type="submit" name="submit" value="submit" id="submit" onclick="calc()" style="display:none;">
+					<fieldset>
+						<legend>Длинна пароля : </legend>
+						<div class="input_box"><input type="number" name="pass" id="pass" value="8" maxlength="1" /></div>
+					</fieldset>
 				</div>
-				<div class="button_box">
-					<label for="reset"  style="font:bold 18px Arial;color:white;text-shadow: 0 0 2px #000;">RESET</label>
-				<input type="reset" name="reset" value="reset" id="reset" style="display:none;width:100%;height:100%;">
-				</div>
-			</div>
 
+				<div style="padding-bottom: 10px;">
+					<fieldset>
+						<legend>Выбор символов :</legend>
+
+
+						<div style="text-align:left;padding-bottom:10px;position:relative;left:-33px;">
+							<input class="checkbox" type="checkbox" name="symbols" id="Up" />
+							<label class="text_box_font label" for="Up">Uppercase (A...Z)</label>
+						</div>
+
+						<div style="text-align:left;padding-bottom:10px;position:relative;left:-33px;">
+							<span></span>
+							<input class="checkbox" type="checkbox" name="symbols" id="Lw" />
+							<label class="text_box_font label" for="Lw">Lowercase (a...z)</label>
+						</div>
+
+						<div style="text-align:left;padding-bottom:10px;position:relative;left:-33px;">
+							<input class="checkbox" type="checkbox" name="symbols" id="Sp" />
+							<label class="text_box_font label" for="Sp">Special ( *&+-!/" )</label>
+						</div>
+						<div style="text-align:left;padding-bottom:10px;position:relative;left:-33px;">
+							<input class="checkbox" type="checkbox" name="symbols" id="Dg" checked />
+							<label class="text_box_font label" for="Dg">Digital (0...9)</label>
+						</div>
+					</fieldset>
+				</div>
+
+				<div style="padding-bottom: 10px;">
+					<fieldset>
+						<legend>Выбор карточки :</legend>
+						<div class="input_box">
+							<select class="" name="" id="video">
+								<optgroup label="nVidia">
+									<option value="GTX1080">GTX1080ti</option>
+									<option value="GTX1080">GTX1080</option>
+									<option value="GTX980">GTX980</option>
+									<option value="GTX760">GTX760</option>
+									<option value="GTX680">GTX680</option>
+								</optgroup>
+								<optgroup label="AMD">
+									<option value="RX580">RX580</option>
+									<option value="RX570">RX570</option>
+									<option value="RX560">RX560</option>
+									<option value="RX480">RX480</option>
+									<option value="RX470">RX470</option>
+									<option value="RX460">RX460</option>
+								</optgroup>
+							</select>
+						</div>
+					</fieldset>
+				</div>
+
+				<div style="padding-bottom: 10px;">
+					<fieldset>
+						<legend>Количество карточек :</legend>
+						<div class="input_box focus"><input type="number" name="" id="acc_pcs" value="1" style="border:0;background-color:#282828; color:#f2f2f2;" /></div>
+				</div>
+				</fieldset>
+
+				<div>
+
+
+					<div class="button_box">
+					<input class="btn-default" type="submit" name="submit" value="CALC!" id="submit" onclick="calc()" />
+					</div>
+
+					<div class="button_box">
+						<input class="btn-default" type="reset" name="reset" value="RESET" id="reset" />
+					</div>
+				</div>
 
 		</form>
 	</section>
 
 	<script src="js/my.js" charset="utf-8"></script>
 	<script src="js/fitty.js" charset="utf-8"></script>
-	<script>fitty('#result');</script>
+	<script>
+		fitty('#result');
+	</script>
 </body>
 
 </html>
