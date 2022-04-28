@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>WPA/WPA2 calc</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
@@ -87,27 +87,32 @@
 				<div style="padding-bottom: 10px;">
 					<fieldset>
 						<legend>Количество карточек :</legend>
-						<div class="input_box focus"><input type="number" name="" id="acc_pcs" value="1" style="border:0;background-color:#282828; color:#f2f2f2;" /></div>
+						<div class="input_box focus">
+							<label for="acc_pcs">
+								<input type="number" name="" id="acc_pcs" value="1" style="border:0;background-color:#282828; color:#f2f2f2;" />
+							</label>
+						</div>
+
+					</fieldset>
 				</div>
-				</fieldset>
 
 				<div>
 
 
 					<div class="button_box">
-					<input class="btn-default" type="submit" name="submit" value="CALC!" id="submit" onclick="calc()" />
+						<input class="btn-default" type="submit" name="submit" value="CALC!" id="submit" onclick="calc()" />
 					</div>
 
 					<div class="button_box">
 						<input class="btn-default" type="reset" name="reset" value="RESET" id="reset" />
 					</div>
 				</div>
-
+			</div>
 		</form>
 	</section>
 
-	<script src="js/my.js" charset="utf-8"></script>
-	<script src="js/fitty.js" charset="utf-8"></script>
+	<script src="static/js/my.js" charset="utf-8"></script>
+	<script src="static/js/fitty.js" charset="utf-8"></script>
 	<script>
 		fitty('#result');
 	</script>
