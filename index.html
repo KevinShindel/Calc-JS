@@ -9,7 +9,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
-	<link rel="manifest" href="static/favicon/site.webmanifest">
 </head>
 
 <body>
@@ -75,20 +74,9 @@
 						<div class="input_box">
 							<label for="video">
 								<select class="" name="" id="video">
-									<optgroup label="nVidia">
-										<option value="GTX1080">GTX1080ti</option>
-										<option value="GTX1080">GTX1080</option>
-										<option value="GTX980">GTX980</option>
-										<option value="GTX760">GTX760</option>
-										<option value="GTX680">GTX680</option>
+									<optgroup label="nVidia" id="nVidia">
 									</optgroup>
-									<optgroup label="AMD">
-										<option value="RX580">RX580</option>
-										<option value="RX570">RX570</option>
-										<option value="RX560">RX560</option>
-										<option value="RX480">RX480</option>
-										<option value="RX470">RX470</option>
-										<option value="RX460">RX460</option>
+									<optgroup label="AMD" id="AMD">
 									</optgroup>
 								</select>
 							</label>
@@ -116,11 +104,15 @@
 						<input class="btn-default" type="reset" name="reset" value="RESET" id="reset" />
 					</div>
 				</div>
+
 			</div>
+
 		</form>
 	</section>
 
-	<script src="static/js/my.js" charset="utf-8"></script>
+	<script src="static/js/jquery-3.6.0.min.js"></script>
+	<script src="static/js/main.js" charset="utf-8"></script>
+	<script src="static/js/cards_select.js" charset="utf-8"></script>
 	<script src="static/js/fitty.js" charset="utf-8"></script>
 	<script>
 		fitty('#result');

@@ -33,8 +33,8 @@ body {
 .input_box:hover::before {
   content: '';
   position: absolute;
-  left: 0px;
-  bottom: 0px;
+  left: 0;
+  bottom: 0;
   height: 4px;
   width: 2px;
   background-color: #0099cf;
@@ -43,8 +43,8 @@ body {
 .input_box:hover::after {
   content: '';
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   height: 4px;
   width: 2px;
   background-color: #0099cf;
@@ -78,12 +78,11 @@ section {
   padding: 10px;
   width: 350px;
   border-top: 1px solid #4b4b4b;
-  /* border: 1px solid black; */
-  box-shadow: 0px 2px 10px black;
+  box-shadow: 0 2px 10px black;
 }
 
 input[type="number"]:focus {
-  outline: 0px;
+  outline: 0;
 }
 
 input::-webkit-outer-spin-button,
@@ -102,7 +101,7 @@ input::-webkit-inner-spin-button {
 
 .checkbox + .label {
   position: relative;
-  padding: 0 0 0 0px;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -146,7 +145,6 @@ input::-webkit-inner-spin-button {
   border: 0;
   background-color: #282828;
   padding: 11px 30px;
-  font-size: 14px;
   width: 100%;
   height: 100%;
   color:white;
